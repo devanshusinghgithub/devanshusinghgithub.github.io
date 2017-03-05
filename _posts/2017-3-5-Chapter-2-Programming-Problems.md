@@ -34,7 +34,7 @@ int main()
 ```
 
 
-[For coloured code formatting click here]()
+[For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
 
 --------------------------------------------------------------------------------------------------------------------------------
 
