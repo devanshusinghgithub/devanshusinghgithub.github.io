@@ -204,7 +204,7 @@ int main()
 #### We have to use islower() function, which requires header file named CTYPE.H to take a letter as an agrument and tell us if it's lowercase or uppercase.
 #### Again this is one of those programs that require pseudocode for explanation.
 
-### Important Note : I did this question after completing the first three chapters which means that I do know the use of if----else statment but this question is for chapeter two and therefore I'm not using if----else which would make it a better program. The reason for this is that I want to show structered progression in my ability. 
+### Important Note : I did this question after completing the first three chapters, which means that I do know the use of if----else statment, but this question is for chapter two, and therefore I'm not using if----else, which would make it a better program. The reason for this is that I want to show structered progression in my ability. 
 
 
 ```C++
