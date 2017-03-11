@@ -192,3 +192,43 @@ int main()
 
 
 
+### Q5. A library function, islower(), takes a single character (a letter) as an argument and
+### returns a nonzero integer if the letter is lowercase, or zero if it is uppercase. This function requires the header file  ### CTYPE.H. Write a program that allows the user to enter a letter, and then displays either zero or nonzero, depending on
+### whether a lowercase or uppercase letter was entered.
+
+
+### Solution.
+
+#### Given
+
+#### We have to use islower() function, which requires header file named CTYPE.H to take a letter as an agrument and tell us if it's lowercase or uppercase.
+#### Again this is one of those programs that require pseudocode for explanation.
+
+### Important Note : I did this question after completing the first three chapters which means that I do know the use of if----else statment but this question is for chapeter two and therefore I'm not using if----else which would make it a better program. The reason for this is that I want to show structered progression in my ability. 
+
+
+```C++
+
+#include <iostream>
+#include <ctype.h>                              //For islower()
+
+using namespace std;
+
+int main()
+
+{
+    char letter;
+    int answer;                                 //Because the funtion islower() returns an interger value
+    
+    cout << "Please Enter a letter: ";          //Ask for a letter from user for input
+    cin >> letter;                              //Assign the variable 'letter' to input
+    
+    answer = islower(letter);                   //Use the islower() function
+    
+    cout << "The letter is: " << answer << endl; //If non-zero integer is the output then the letter us lowercase.
+                                                 //If zero is returned then it's lowercase.
+    return 0;
+    
+}
+```
+
