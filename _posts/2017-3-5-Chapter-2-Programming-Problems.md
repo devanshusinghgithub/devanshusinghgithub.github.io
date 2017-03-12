@@ -1,4 +1,14 @@
 
+## The following are solutions to problems of Chapter 2 of Object Oriented Programming in C++ by Robert Lafore.
+## Please click the link below for coloured formatting for better legibility, otherwise continue reading. 
+
+[For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
 ###  Exercise 2.1 Assuming there are 7.481 gallons in a cubic foot, write a program that asks a user in enter a number of gallons, and then displays the equivalent in cubic feet. 
 
 ### Solution.
@@ -34,7 +44,7 @@ int main()
 ```
 
 
-[For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
+
 
 
 
@@ -231,4 +241,48 @@ int main()
     
 }
 ```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+### Q6. On a certain day the British pound was equivalent to $1.487 U.S., the French franc was
+### $0.172, the German deutschemark was $0.584, and the Japanese yen was $0.00955.
+### Write a program that allows the user to enter an amount in dollars, and then displays this
+### value converted to these four other monetary units.
+
+
+#### Solution:
+
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double  gbp, fra, ger, yen;
+    double  usd;
+    
+    gbp = 0.672;
+    fra = 5.813;
+    ger = 1.712;
+    yen = 104.712;
+    
+    cout << "Please enter amount in USD: ";
+    cin >> usd;
+    
+    cout << "Equivalent amount in Great Britain Pound is: " << usd * gbp << endl;
+    cout << "Equivalent amount in Franc is: " << usd * fra << endl;
+    cout << "Equivalent amount in German Mark is: " << usd * ger << endl;
+    cout << "Equivalent amount in Japanese Yen is: " << usd * yen << endl;
+
+    return 0;
+}
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
 
