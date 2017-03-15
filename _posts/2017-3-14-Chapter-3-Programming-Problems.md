@@ -85,3 +85,74 @@ int main()
 }
 
 ```
+--------------------------------------------------------------------------------------------------------------------------------
+
+### Q3. Create the equivalent of a four-function calculator. The program should ask the user to enter a number, an operator, and another number. (Use floating point.) It should then carry out the specified arithmetical operation: adding, subtracting, multiplying, or dividing the two numbers. Use a switch statement to select the operation. Finally, display the result.
+
+### When it finishes the calculation, the program should ask whether the user wants to do another calculation. The response can be ‘y’ or ‘n’. Some sample interaction with the program might look like this:
+
+### Enter first number, operator, second number: 10 / 3
+### Answer = 3.333333
+### Do another (y/n)? y
+### Enter first number, operator, second number: 12 + 100
+### Answer = 112
+### Do another (y/n)? n
+
+
+
+#### Solution:
+
+##### This question is very similar to one of the examples where we used while( n != 0) statement. In this case we replace n with a char and 0 with n for no. Simple question. There are actually two more ways in which this problem can be handled. But the following is my approach. 
+
+
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float num1, num2, answer;
+    char arithop, ch;
+    
+    while (ch != 'n')
+    {
+    cout << "Please enter a number, operator and another number: ";
+    cin >> num1 >> arithop >> num2;
+    
+    if 
+   
+        (arithop == '+')
+        answer = num1 + num2;
+        
+     
+    
+    else if
+       
+        (arithop == '-')
+        answer = num1 - num2;
+        
+    
+    else if
+    
+        (arithop == '/')
+        answer = num1/num2;
+        
+    
+    else if 
+    
+        (arithop == '*')
+        answer = num1 * num2;
+        
+    cout << answer << endl;
+    
+    cout << "Do you want to do another calculation? : y/n";
+    cin >> ch;
+    }
+    
+return 0;
+```    
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
