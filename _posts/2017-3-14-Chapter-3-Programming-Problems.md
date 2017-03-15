@@ -156,3 +156,54 @@ return 0;
 }
 
 --------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q4. Use for loops to construct a program that displays a pyramid of Xs on the screen. The pyramid should look like this
+
+###      X
+###     XXX
+###    XXXXX
+###   XXXXXXX
+###  XXXXXXXXX
+
+### except that it should be 20 lines high, instead of the 5 lines shown here. One way to do this is to nest two inner loops, one to print spaces and one to print Xs, inside an outer loop that steps down the screen from line to line.
+
+#### Solution:
+
+##### The question itself gives us a hint on how to solve this. As we learned, if the no of iterations are known or are fixed, we use for loop. So the hint here is we can create a pyramid by nesting two inner loops. So, we will be nexting two for loops in on outter loop. 
+
+##### One more thing to understand here is that the pyramid's base will be 20 total 'x'. This is key to forming the right for loop for spaces. We need to create a strong relation between spaces and 20 to make sure it works right. Remember to put endl not in the inner loops but in the outer loop or it's scope changes. 
+
+##### Lastly after the x has been printed there is no more spaces need obviously. So, don't get bogged down by that.
+##### In each row upto 20, spaces keep decreasing by one until there is no space at the base of the pyramid. 
+
+```C++
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int iterations, space, row, x;
+    row = 20;
+    
+    for (iterations = 0; iterations < 20; ++iterations)
+    
+    {
+        for (space = 0; space < row - iterations; ++space)
+            {
+                cout << " ";
+            }
+    
+        for (x = 0; x < 2 * iterations + 1; x++)
+            {
+                cout << "x";
+            }
+        cout << endl;                                           
+    }
+
+return 0;
+
+}
+
+```
