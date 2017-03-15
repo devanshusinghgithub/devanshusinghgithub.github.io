@@ -38,3 +38,50 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 
 
+
+### Q2. Write a temperature-conversion program that gives the user the option of converting Fahrenheit to Celsius or Celsius to Fahrenheit. Then carry out the conversion. Use floating-point numbers. Interaction with the program might look like this:
+
+### Type 1 to convert Fahrenheit to Celsius,
+### 2 to convert Celsius to Fahrenheit: 1
+### Enter temperature in Fahrenheit: 70
+### In Celsius that’s 21.111111
+
+
+#### Solution: 
+
+##### Now, problem clearly states that before you even take the input on which you will perform computation, you must give user the option to choose between one or the other. So here we have two options, one is to use two if statements and the other is to use an if.....else statement. For if.....else statement we will in reality be saying that as long as the user type any integer that is not 1, we will convert from Celsius to Fehrenheit. But with two if statements the user will have to type exactly what we want him/her to. 
+
+```C++
+
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+    int x;
+    float fahrenheit, celsius;
+    double ftoc, ctof;
+    
+    cout << "Please enter 1 for to convert from Fahrenheit to Celsius or 2 for the other way around: ";     // Ask user for input
+    cin >> x;                                                                                               // Entered integer is stored in variable x.
+                                                                                                            // The entered value to choose from if or else.
+    
+    if (x == 1)
+       {
+           cout << "Enter value in Fahrenheit: ";
+           cin >> fahrenheit;
+           ftoc = (fahrenheit - 32) * 5/9;
+           cout << "Equivalent value in Celsius is: " << ftoc << endl;
+       }
+    if (x == 2)
+        {   cout << "Enter value in Celsius: ";
+            cin >> celsius;
+            ctof = (celsius * 9/5) + 32;
+            cout << "Equivalent value in Fahrenheit is: " << ctof << endl;
+        }
+    return 0;
+    
+}
+
+```
