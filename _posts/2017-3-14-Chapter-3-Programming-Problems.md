@@ -211,4 +211,42 @@ return 0;
 ### Q5. Modify the FACTOR program in this chapter so that it repeatedly asks for a number and calculates its factorial, until the user enters 0, at which point it terminates. You can enclose the relevant statements in FACTOR in a while loop or a do loop to achieve this effect.
 
 
-#### Solution: So, the factor program uses a for loop. 
+#### Solution:
+
+# I am really starting to enjoy programming now...LOL
+
+
+```C++
+
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+    unsigned int number;
+    unsigned long factorial;
+    number = 1;
+    factorial = 1;
+    
+    while (number != 0)
+    {
+        cout << "Please enter a number: ";
+        cin >> number;
+        
+        for (int j = number; j > 0; j--)
+        {
+            factorial *= j;
+        }
+        
+        cout << "Factorial of chosen number is: " << factorial << endl;
+        
+    }
+
+return 0;
+
+}
+
+```
+
+
