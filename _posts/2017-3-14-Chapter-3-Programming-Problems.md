@@ -268,7 +268,7 @@ return 0;
 
 ##### The question says a for loop will make calculations easy and I agree. We can set a variable to intial input amount and we can have variables as conditions for 'for' loop. This program requires clearly defined variables so be professional. 
 ##### Use the following variable names to make the program better 
-##### 1. 'amount' for intial amount
+##### 1. 'finalamount' for intial amount and final amount. 
 ##### 2. 'year' for number of years
 ##### 3. 'interest' for interest rate.
 
@@ -279,18 +279,18 @@ using namespace std;
 
 int main()
 {
-    int  amount, year;                        //For input from user. 
+    int year;                                                                       //For input from user. 
     float finalamount , interest;
     
-    cout << "Enter the initial invested amound: ";
-    cin >> amount;
+    cout << "Enter the initial invested amound: ";                                  //This variable has been sent to finalamount 
+                                                                                    //because of the formula used. 
+    cin >> finalamount;
     cout << "Enter number of years to maturity: ";
     cin >> year;
     cout << "Enter the Rate of Interest(percent per year): ";
     cin >> interest;
     
-    finalamount = amount;
-    
+        
     for (int j = 1; j <= year ; j++)
         {
             finalamount = finalamount + (finalamount * interest/100);
