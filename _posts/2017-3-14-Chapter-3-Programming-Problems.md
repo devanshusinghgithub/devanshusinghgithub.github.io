@@ -337,3 +337,51 @@ int main()
     return 0;
 }
 ```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q8. Write another version of the program from Question 6 so that, instead of finding the final amount of your investment, you tell the program the final amount and it figures out how many years it will take, at a fixed rate of interest compounded yearly, to reach this amount. What sort of loop is appropriate for this problem? (Don’t worry about fractional years; use an integer value for the year.)
+
+
+#### Solution: 
+
+##### Always use a notebook or paper in the beginning of learning programming to understand how control goes from one statement to another. This is again an easy problem. Infact it's so simple that we can just copy the code of Question 6, change the formula to decrease from final amount to initial amount and where it stop because of another condition that final amount should not become less than intial amount, we can cout the counter from loop conditions as output. This all was figured out using pen and paper and creating pseudocode with leading lines to show flow of control. 
+
+
+##### ALSO REMEMBER THIS!!!
+##### The for loop is appropriate when you know in advance how many times the loop will be executed. The while and do loops are used when you don’t know in advance when the loop will terminate (the while loop when you may not want to execute the loop body even once, and the do loop when you’re sure you want to execute the loop body at least once). Also note that this isn't a hard and fast rule but it does guide you a bit. 
+
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int initialamount, j;                                                                       //For input from user. 
+    float finalamount , interest;
+    j = 0;
+    
+    cout << "Enter the final amount: ";                                  //This variable has been sent to finalamount 
+                                                                                    //because of the formula used. 
+    cin >> finalamount;
+    cout << "Enter the initial amount: ";
+    cin >> initialamount;
+    cout << "Enter the Rate of Interest(percent per year): ";
+    cin >> interest;
+    
+    while (finalamount >= initialamount)
+        {
+            finalamount = finalamount - (finalamount * interest/100);
+            j++;
+        }
+    cout<<"No of years to reach Final Amount: "<< j << endl;
+    
+return 0;
+}
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
