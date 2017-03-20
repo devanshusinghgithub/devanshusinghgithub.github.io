@@ -15,6 +15,7 @@
 
 
 ```C++
+
 #include <iostream>
 using namespace std;
 
@@ -34,11 +35,11 @@ phone phoneuser;                                                      //Define a
 
 cout << "Please enter your area code, exchange, and number";
 
-cin >> phoneuser.area >> phoneuser.exchange >> phoneuser.number;      //We know this is the only way to access structure members
+cin >> phoneuser.areacode >> phoneuser.exchange >> phoneuser.number;      //We know this is the only way to access structure members
                                                                       //Because structure members are of user-defined data type
 cout << "My number is: " << "(212) 767-8900";                           
 cout << "Your number is: " << "(" << phoneuser.areacode << ")" << phoneuser.exchange << "-" << phoneuser.number << endl;
  
 return 0;
-} 
+}
 ```
