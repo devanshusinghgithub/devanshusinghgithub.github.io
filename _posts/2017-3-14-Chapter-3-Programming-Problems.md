@@ -385,3 +385,75 @@ return 0;
 
 
 --------------------------------------------------------------------------------------------------------------------------------
+
+
+# Solutions To Problem From Chapter 4 Of Object Oriented Programming in C++
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+### A phone number, such as (212) 767-8900, can be thought of as having three parts: the area code (212), the exchange (767),
+### and the number (8900). Write a program that uses a structure to store these three parts of a phone number separately.
+### Call the structure phone. Create two structure variables of type phone.
+### Initialize one, and have the user input a number for the other one. Then display both numbers.
+### The interchange might look like this:
+### Enter your area code, exchange, and number: 415 555 1212
+### My number is (212) 767-8900
+### Your number is (415) 555-1212
+
+
+
+#### Solution:
+
+##### This problem is way to similar to the example where we stored model number, 
+##### part number and part cost in a structure. 
+##### In this case we will cout "(212) 767-8900" for my number and then cout the members 
+##### of the structure that are modified by the user using input. 
+##### So, replace moder number with area code, part number with exchange, and part cost with the number. 
+
+
+
+```C++
+
+#include <iostream>
+using namespace std;
+
+
+struct phone
+{
+int areacode;                                                         //Three members of structure called phone.       
+int exchange; 
+int number; 
+};
+
+
+int main()
+{
+
+phone phoneuser;                                                      //Define a variable phoneuser of type phone
+
+cout << "Please enter your area code, exchange, and number";
+
+cin >> phoneuser.areacode >> phoneuser.exchange >> phoneuser.number;  //We know this is the only way to access structure members
+                                                                      //Because structure members are of user-defined data type
+cout << "My number is: " << "(212) 767-8900";                           
+cout << "Your number is: " << "(" << phoneuser.areacode << ")" << phoneuser.exchange << "-" << phoneuser.number << endl;
+ 
+return 0;
+}
+```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+### A point on the two-dimensional plane can be represented by two numbers: an x coordinate and a y coordinate.
+For example, (4,5) represents a point 4 units to the right of the
+vertical axis, and 5 units up from the horizontal axis. The sum of two points can be
+defined as a new point whose x coordinate is the sum of the x coordinates of the two
+points, and whose y coordinate is the sum of the y coordinates.
+Write a program that uses a structure called point to model a point. Define three points,
+and have the user input values to two of them. Then set the third point equal to the sum
+of the other two, and display the value of the new point. Interaction with the program
+might look like this:
+Enter coordinates for p1: 3 4
+Enter coordinates for p2: 5 7
+Coordinates of p1+p2 are: 8, 11
+
