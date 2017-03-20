@@ -482,5 +482,46 @@ cout << "Coordinates for sum of point 1 and point 2 is: " << "(" << p3.x << ", "
 
 return 0;
 }
+```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+### Q3. Create a structure called Volume that uses three variables of type Distance (from the ENGLSTRC example) to model the volume of a room. Initialize a variable of type Volume to specific dimensions, then calculate the volume it represents, and print out the result. To calculate the volume, convert each dimension from a Distance variable to a variable of type float representing feet and fractions of a foot, and then multiply the resulting three numbers.
+
+#### Solution:
+
+##### A very simple problem. The question itself tells us which example to take 'inspiration' from. Basically we are going to nest a structure inside another structure just like we did in the example architecture sofware example where we nested two structures. 
+
+```C++
+#include <iostream>
+using namespace std;
+
+struct Distance
+{
+int feet;
+float inches;
+};
+
+struct Volume
+{
+Distance length;
+Distance width;
+Distance height;
+};
+
+int main()
+{
+float l, w, h;
+
+Volume room = { { 16, 3.5 }, { 12, 6.25 }, { 8, 1.75 } };
+
+l = room.length.feet + room.length.inches/12.0;
+w = room.width.feet + room.width.inches /12.0;
+h = room.height.feet + room.height.inches/12.0;
+
+cout << "Volume of the room is: " << l*w*h << " cubic feet" << endl;
+return 0;
+}
+```
 
 --------------------------------------------------------------------------------------------------------------------------------
