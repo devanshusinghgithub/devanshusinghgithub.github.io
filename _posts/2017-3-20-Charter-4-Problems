@@ -8,4 +8,7 @@
 
 #### Solution:
 
-##### 
+##### This problem is way to similar to the example where we stored model number, part number and part cost in a structure. In this case we will cout "(212) 767-8900" for my number and then cout the members of the structure that are modified by the user using input. So, replace moder number with area code, part number with exchange, and part cost with the number. 
+
+
+ 
