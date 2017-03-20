@@ -21,7 +21,7 @@ using namespace std;
 
 struct phone
 {
-int areacode;                       //Three members of structure called phone.       
+int areacode;                                                         //Three members of structure called phone.       
 int exchange; 
 int number; 
 };
@@ -29,18 +29,16 @@ int number;
 
 int main()
 {
-phone phoneno1 = { 212, 767, 8900 }; //initialize phone number
-phone ph2; //define phone number
-// get phone no from user
-cout << “\nEnter your area code, exchange, and number”;
-cout << “\n(Don’t use leading zeros): “;
-cin >> ph2.area >> ph2.exchange >> ph2.number;
-cout << “\nMy number is “ //display numbers
-<< ‘(‘ << ph1.area << “) “
-<< ph1.exchange << ‘-’ << ph1.number;
-cout << “\nYour number is “
-<< ‘(‘ << ph2.area << “) “
-<< ph2.exchange << ‘-’ << ph2.number << endl;
+
+phone phoneuser;                                                      //Define a variable phoneuser of type phone
+
+cout << "Please enter your area code, exchange, and number";
+
+cin >> phoneuser.area >> phoneuser.exchange >> phoneuser.number;      //We know this is the only way to access structure members
+                                                                      //Because structure members are of user-defined data type
+cout << "My number is: " << "(212) 767-8900";                           
+cout << "Your number is: " << "(" << phoneuser.areacode << ")" << phoneuser.exchange << "-" << phoneuser.number << endl;
+ 
 return 0;
 } 
 ```
