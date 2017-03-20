@@ -525,3 +525,41 @@ return 0;
 ```
 
 --------------------------------------------------------------------------------------------------------------------------------
+
+### Q4. Create a structure of type date that contains three members: the month, the day of the month, and the year, all of type int. (Or use day-month-year order if you prefer.) Have the user enter a date in the format 12/31/2001, store it in a variable of type struct date, then retrieve the values from the variable and print them out in the same format.
+
+
+####  Solution:
+
+##### Again a simple program with only input and output. No loop needed. 
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+struct Date
+{
+int month;
+int day;
+int year;
+};
+
+int main()
+{
+struct date1;
+
+cout << "Please enter the day of the month: ";
+cin >> date1.day;
+cout << "Please enter the month: ";
+cin >> date1.month;
+cout << "Please enter the year: ";
+cin >> date1.year;
+
+cout << "The chosen date is: " << date1.month << "/" << date1.day << "/" << date1.year << endl;
+
+return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
