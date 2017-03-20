@@ -11,4 +11,31 @@
 ##### This problem is way to similar to the example where we stored model number, part number and part cost in a structure. In this case we will cout "(212) 767-8900" for my number and then cout the members of the structure that are modified by the user using input. So, replace moder number with area code, part number with exchange, and part cost with the number. 
 
 
- 
+#include <iostream>
+using namespace std;
+
+
+struct phone
+{
+int areacode;                       //Three members of structure called phone.       
+int exchange; 
+int number; 
+};
+
+
+int main()
+{
+phone phoneno1 = { 212, 767, 8900 }; //initialize phone number
+phone ph2; //define phone number
+// get phone no from user
+cout << “\nEnter your area code, exchange, and number”;
+cout << “\n(Don’t use leading zeros): “;
+cin >> ph2.area >> ph2.exchange >> ph2.number;
+cout << “\nMy number is “ //display numbers
+<< ‘(‘ << ph1.area << “) “
+<< ph1.exchange << ‘-’ << ph1.number;
+cout << “\nYour number is “
+<< ‘(‘ << ph2.area << “) “
+<< ph2.exchange << ‘-’ << ph2.number << endl;
+return 0;
+} 
