@@ -417,6 +417,8 @@ return 0;
 #include <iostream>
 using namespace std;
 
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
 
 struct phone
 {
@@ -424,6 +426,8 @@ int areacode;                                                         //Three me
 int exchange; 
 int number; 
 };
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 int main()
@@ -459,11 +463,17 @@ return 0;
 #include <iostream>
 using namespace std;
 
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
+
 struct point
 {
 int x; 
 int y; 
 };
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -496,11 +506,16 @@ return 0;
 #include <iostream>
 using namespace std;
 
+////////////////////////////////////////////////////STRUCTURE1//////////////////////////////////////////////////////
+
+
 struct Distance
 {
 int feet;
 float inches;
 };
+
+////////////////////////////////////////////////////STRUCTURE2//////////////////////////////////////////////////////
 
 struct Volume
 {
@@ -508,6 +523,8 @@ Distance length;
 Distance width;
 Distance height;
 };
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -538,12 +555,17 @@ return 0;
 #include<iostream>
 using namespace std;
 
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
+
 struct Date
 {
 int month;
 int day;
 int year;
 };
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -604,4 +626,98 @@ int main()
     
     return 0;
     }
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q6. Create a structure called time. Its three members, all type int, should be called hours, minutes, and seconds. Write a program that prompts the user to enter a time value in hours, minutes, and seconds. This can be in 12:59:59 format, or each number can be entered at a separate prompt (“Enter hours:”, and so forth). The program should then store the time in a variable of type struct time, and finally print out the total number of seconds represented by this time value:long totalsecs = t1.hours*3600 + t1.minutes*60 + t1.seconds.
+
+
+#### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+
+int totalseconds;
+
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
+
+struct time 
+{
+int hours;
+int minutes;
+int seconds;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    time time1;
+    
+    cout << "Enter Hours: ";
+    cin >> time1.hours;
+    
+    cout << "Enter Minutes: ";
+    cin >> time1.minutes;
+ 
+    cout << "Enter Seconds: ";
+    cin >> time1.seconds;
+ 
+    totalseconds = time1.hours*3600 + time1.minutes*60 + time1.seconds;
+ 
+    cout<<"The total number of seconds is: "<< totalseconds << endl ;
+return 0;
+}
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q7.  Create a structure called sterling that stores money amounts in the old-style British system discussed in Exercises 8 and 11 in Chapter 3, “Loops and Decisions.” The members could be called pounds, shillings, and pence, all of type int. The program should ask the user to enter a money amount in new-style decimal pounds (type double), convert it to the old-style system, store it in a variable of type struct sterling, and then display this amount in pounds-shillings-pence format.
+
+
+#### Solution: 
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
+struct sterling 
+{
+int pounds;
+int shillings;
+int pence;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    sterling s1;
+    double decpounds;
+    float decfrac;
+    
+    cout << "Please enter value new style decimal pounds: ";
+    cin >> decpounds;
+    
+    s1.pounds = static_cast<int>(decpounds);
+    decfrac = 240*(decpounds-s1.pounds);
+
+    s1.shillings = (static_cast<int>(decfrac))%12;
+    
+    decfrac = static_cast<int>((decfrac-s1.shillings)/12);
+     
+    cout<<"The equivalent amount as per old notation is: "<< s1.pounds << "."<< decfrac <<"." <<s1.shillings << endl; 
+
+return 0;
+}
 ```
