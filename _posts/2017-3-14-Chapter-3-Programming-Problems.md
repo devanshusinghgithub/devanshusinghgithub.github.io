@@ -710,11 +710,11 @@ int main()
     cin >> decpounds;
     
     s1.pounds = static_cast<int>(decpounds);
-    decfrac = 240*(decpounds-s1.pounds);
+    decfrac = 240 * (decpounds - s1.pounds);
 
-    s1.shillings = (static_cast<int>(decfrac))%12;
+    s1.shillings = (static_cast<int>(decfrac)) % 12;
     
-    decfrac = static_cast<int>((decfrac-s1.shillings)/12);
+    decfrac = static_cast<int>((decfrac-s1.shillings) / 12);
      
     cout<<"The equivalent amount as per old notation is: "<< s1.pounds << "."<< decfrac <<"." <<s1.shillings << endl; 
 
