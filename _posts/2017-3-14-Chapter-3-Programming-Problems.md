@@ -928,3 +928,53 @@ void zeroSmaller(int& x, int& y)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 ```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+### Q4. Write a function that takes two Distance values as arguments and returns the larger one. Include a main() program that accepts two Distance values from the user, comparesthem, and displays the larger. (See the RETSTRC program for hints.)
+
+
+#### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+
+//////////////////////////////////////Function Declaration/////////////////////////////////////
+
+int distance (int d1, int d2);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int distance1, distance2;
+	
+	cout << "Please enter first distance: ";
+	cin >> distance1;
+	
+	cout << "Please enter second distance: ";
+	cin >> distance2;
+
+	cout << " The larger distance is: "<< distance (distance1, distance2);
+	
+}
+
+
+////////////////////////////////////Function Definition////////////////////////////////////////
+
+int distance (int d1, int d2)
+
+{ 
+    if(d1<d2) 
+        return d2; 
+    
+    else
+        return d1;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+```
+
+--------------------------------------------------------------------------------------------------------------------------------
