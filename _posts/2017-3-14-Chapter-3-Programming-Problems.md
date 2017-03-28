@@ -886,3 +886,45 @@ double power(double nn, int pp)
 
 #### Solution:
 
+```C++
+#include <iostream>
+using namespace std;
+
+/////////////////////////////////Funtion Declaration//////////////////////////////////////
+
+void zeroSmaller(int&, int&);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+int a, b;
+
+cout << "Please enter first number: ";
+cin >> a;
+
+cout << "Please enter second number: ";
+cin >>b;
+
+zeroSmaller(a, b);
+
+cout << "First number is: " << a << endl;
+cout << "Second number is: " << b << endl;
+
+return 0;
+}
+
+/////////////////////////////////Function Definition//////////////////////////////////////
+
+void zeroSmaller(int& x, int& y)
+{
+    if( x < y )
+        x = 0;
+
+    else
+        y = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+```
