@@ -721,8 +721,168 @@ int main()
 return 0;
 }
 ```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
 ### Q8. Use the time structure from Question 6, and write a program that obtains two time values from the user in 12:59:59 format, stores them in struct time variables, converts each one to seconds (type int), adds these quantities, converts the result back to hoursminutes-seconds, stores the result in a time structure, and finally displays the result in 12:59:59 format.
 
 #### Solution:
 
+
+```C++
+#include<iostream>
+using namespace std;
+
+int totalseconds, totalseconds1, totalseconds2;
+
+////////////////////////////////////////////////////STRUCTURE///////////////////////////////////////////////////////
+
+
+struct time 
+{
+int hours;
+int minutes;
+int seconds;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    time time1, time2, time3;
+    
+    cout << "Enter Hours: ";
+    cin >> time1.hours;
+    
+    cout << "Enter Minutes: ";
+    cin >> time1.minutes;
+ 
+    cout << "Enter Seconds: ";
+    cin >> time1.seconds;
+ 
+    totalseconds1 = (time1.hours * 3600) + (time1.minutes * 60) + time1.seconds;
+    
+    cout << "Enter Hours for Second Time: ";
+    cin >> time2.hours;
+    
+    cout << "Enter Minutes for Second Time: ";
+    cin >> time2.minutes;
+    
+    cout << "Enter Seconds for Second Time: ";
+    cin >> time2.seconds;
+    
+    totalseconds2 = (time2.hours * 3600) + (time2.minutes * 60) + time2.seconds;
+    
+    totalseconds = totalseconds1 + totalseconds2;
+    
+    time3.hours = (totalseconds / 3600) % 24;
+    time3.minutes = (totalseconds / 60) % 60;
+    time3.seconds = (totalseconds / 60);
+    
+    cout<<"The new time is: "<< time3.hours << ":" << time3.minutes << ":" << time3.seconds << endl ;
+
+return 0;
+}
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+# Questions on Functions
+
+
+
+### Q1. Refer to the CIRCAREA program in Chapter 2, “C++ Programming Basics.” Write a function called circarea() that finds the area of a circle in a similar way. It should take an argument of type float and return an argument of the same type. Write a main() function that gets a radius value from the user, calls circarea(), and displays the result.
+
+
+#### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+float circlearea (float radius);    //A funciton called circlearea that will
+                                    // return a float value and takes another 
+                                    //float radius as argument
+                                    //Function declaration
+
+int main()
+
+{
+    float userradius;
+    cout << "Please enter radius: ";
+    cin >> userradius;
+    cout << "The area of the circle of entered radius is: " << circlearea(userradius) << endl;
+    return 0;
+}
+
+/////////////////////////////////////////////Function Definition////////////////////////////////////////////////
+
+float circlearea(float radius)
+{
+    const float PI = 3.14F;
+    return radius * radius * PI;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+```
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q2.  Raising a number n to a power p is the same as multiplying n by itself p times. Write a function called power() that takes a double value for n and an int value for p, and returns the result as a double value. Use a default argument of 2 for p, so that if this argument is omitted, the number n will be squared. Write a main() function that gets values from the user to test this function.
+
+
+#### Solution: 
+
+```C++
+#include<iostream>
+using namespace std;
+
+/////////////////////////////////////////Funtion Declaration////////////////////////////////////////////
+
+double power (double, int = 2);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int p;
+	double n;
+	double solution;
+	
+	cout << "Please enter the number : ";
+	cin >> n;
+	
+	cout << "Please enter the exponent : ";
+	cin >> p;
+	
+	solution = power(n,p);
+	
+	cout << "Result is " << solution;
+	
+	return 0;
+}
+
+////////////////////////////////////Function Definition//////////////////////////////////////////
+
+double power(double nn, int pp)
+{
+	double a = 1;
+	for(int i = 1; i <= pp; i++)
+		a = a * nn;
+	return a;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+```
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q3. Write a function called zeroSmaller() that is passed two int arguments by reference and then sets the smaller of the two numbers to 0. Write a main() program to exercise this function.
+
+
+#### Solution:
 
