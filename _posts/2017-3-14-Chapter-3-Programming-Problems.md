@@ -977,4 +977,58 @@ int distance (int d1, int d2)
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
---------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q5. Write a function called hms_to_secs() that takes three int values—for hours, minutes, and seconds—as arguments, and returns the equivalent time in seconds (type long). Create a program that exercises this function by repeatedly obtaining a time value in hours, minutes, and seconds from the user (format 12:59:59), calling the function, and displaying the value of seconds it returns.
+
+
+#### Solution: Finally an exciting problem after a long lull. The function should have three arguments. It's similar to one we did in the previous chapter but this time we are using a function instead of a structure. 
+
+```C++
+#include<iostream>
+using namespace std;
+
+////////////////////////////////////Function Declaration/////////////////////////////////////
+
+int hms_to_sec(int hours, int minutes, int seconds);
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+int userhours, userminutes, userseconds, finalseconds;
+
+finalseconds = hms_to_sec(userhours , userminutes, userseconds);
+
+cout << "Please enter hours: ";
+cin >> userhours;
+
+cout << "Please enter minutes: ";
+cin >> userminutes;
+
+cout << "Please enter seconds: ";
+cin >> userseconds;
+
+cout << "Equavilent in seconds is: " << finalseconds;
+
+return 0;
+}
+
+///////////////////////////////////////Funtion Definition///////////////////////////////////////////
+
+int hms_to_sec(int hours, int minutes, int seconds)
+{
+    int result;
+
+    result = (hours * 60 * 60) + (minutes * 60) + seconds;
+
+    return result;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+```
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
