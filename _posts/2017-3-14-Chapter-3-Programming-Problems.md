@@ -999,7 +999,6 @@ int main()
 {
 int userhours, userminutes, userseconds, finalseconds;
 
-finalseconds = hms_to_sec(userhours , userminutes, userseconds);
 
 cout << "Please enter hours: ";
 cin >> userhours;
@@ -1010,6 +1009,9 @@ cin >> userminutes;
 cout << "Please enter seconds: ";
 cin >> userseconds;
 
+finalseconds = hms_to_sec(userhours , userminutes, userseconds);
+
+6. 
 cout << "Equavilent in seconds is: " << finalseconds;
 
 return 0;
@@ -1032,3 +1034,105 @@ int hms_to_sec(int hours, int minutes, int seconds)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+### Q6: Start with the program from Question 8 in Chapter 4, “Structures,” which adds two struct time values. Keep the same functionality, but modify the program so that it uses two functions. The first, time_to_secs(), takes as its only argument a structure of type time, and returns the equivalent in seconds (type long). The second function, secs_to_time(), takes as its only argument a time in seconds (type long), and returns a structure of type time.
+
+
+#### Solution: The difficulty of programs is on the rise again. In this we will pass a structure as argument. We will create two functions i.e. time_to_secs() and secs_to_time().
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+/////////////////////////////////////Structure of type time////////////////////////////////////
+
+struct time
+{
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////Function must return type long and should take argument of type time(structure)///////
+//////////////////////////////Function Declaration/////////////////////////////////////////////
+
+long time_to_secs(time usertime);
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////A second function should return type time and should take in agrument, type long seconds///
+////////////////////////////////////////Funtion Declaration/////////////////////////////////////
+
+time secs_to_time(long userseconds);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	
+	time t1, t2, t3;
+	
+
+	cout << "Please enter hours value of first time: ";
+	cin >> t1.hours;
+	
+	cout << "Please enter minutes value of first time: ";
+	cin >> t1.minutes; 
+	
+	cout << "Please enter hours value of second time: ";
+	cin >> t2.hours;
+	
+	cout << "Please enter minutes value of second time: ";
+	cin >> t2.minutes;
+	
+	cout << "Please enter seconds value of second time: ";
+	cin >> t2.seconds;
+	
+	t3 = secs_to_time (time_to_secs(t1) + time_to_secs(t2));
+	
+	cout<<"The sum is: "<< t3.hours << ":" << t3.minutes << ":" <<t3.seconds << endl;
+	
+	return 0;
+}
+
+/////////////////////////////////Funtion definition for time_to_secs///////////////////////////////////
+
+
+long time_to_secs(time usertime)
+{   
+    int result1;
+    result1 = t1.hours * 3600 + t1.minutes * 60 + t1.seconds;
+    return result1;
+}
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////Funtion declaration for secs_to_time///////////////////////////////////////
+
+    time secs_to_time(long userseconds)
+    
+{
+	time result2;
+	
+	t3.seconds = userseconds % 60; 
+	t3.minutes= ((userseconds - usertime . seconds) % 3600) / 60;
+	t3.hours = userseconds / 3600;
+	
+	if(t3.seconds>59)
+	    {
+	        t3.seconds -= 59; t3.minutes++;
+	    } 
+	        
+	        
+	if(t3.minutes > 59)
+	    {
+	        t3.minutes -= 59; t3.hours++;
+	    }  
+	    
+	return t3;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
