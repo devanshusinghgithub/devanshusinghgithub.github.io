@@ -1136,3 +1136,135 @@ long time_to_secs(time usertime)
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+### Q7. Start with the power() function of Question 2, which works only with type double. Create a series of overloaded functions with the same name that, in addition to double, also work with types char, int, long, and float. Write a main() program that exercises these overloaded functions with all argument types.
+
+#### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+
+////////////////////////////////Funtion declarations///////////////////////////////////////
+
+double power(double, int p);
+
+char   power(char, int p);
+
+int    power(int, int p);
+
+long   power(long, int p);
+
+float  power(float, int p);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    	int p;
+	
+	double double_n;
+	char char_n;
+	int int_n;
+	long long_n;
+	float float_n;
+	
+	double solution;
+	
+	cout << "Please type a number: ";
+	cin >> double_n;
+	cin >> char_n;
+	cin >> int_n;
+	cin >> long_n;
+	cin >> float_n;
+	
+	
+	cout << "Please type an exponent: ";
+	cin >> p;
+	
+	solution = power(double_n,p);
+    	solution = power(char_n,p);
+    	solution = power(int_n,p);
+   	 solution = power(long_n,p);
+    	solution = power(float_n,p);
+    
+   	 return 0;
+}	
+
+/////////////////////////////////Funtion Definitions////////////////////////////////////////////
+
+double power(double double_n, int p)
+{
+	double a = 1;
+	for(int i = 1; i <= p; i++)
+		a = a * double_n;
+	return a;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+### Q8. Write a function called swap() that interchanges two int values passed to it by the calling program. (Note that this function swaps the values of the variables in the calling program, not those in the function.) You’ll need to decide how to pass the arguments. Create a main() program to exercise the function.
+
+
+#### Solution: The problem is similar to Question 3 and the examples given for argument by reference. We need to utilise argument by reference to solve this problem. In the examples the temp variable was used to store value for swap purposes and apart from that this problem is almost exactly similar to Question 3. 
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+//////////////////////////////////Function Declaration/////////////////////////////////////
+
+
+void swap(int& a, int& b);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+
+    int a, b;
+	
+    cout << "Please enter first number: ";
+    cin >> a;
+
+    cout << "Please enter second number: ";
+    cin >>b;
+    
+    swap(a, b);
+	
+	cout << "The first number is: " << a << endl;
+	
+	cout << "The second number is: " << b << endl;
+
+    return 0;	
+}	
+	
+/////////////////////////////////Function Definition//////////////////////////////////////
+
+
+void swap(int& a, int& b)
+{
+    int temp = a;
+        a = b;
+        b = temp;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+### 9. Repeat Exercise 8, but instead of two int variables, have the swap() function interchange two struct time values (see Question 6).
+
+#### Solution:
+
+
+
+
