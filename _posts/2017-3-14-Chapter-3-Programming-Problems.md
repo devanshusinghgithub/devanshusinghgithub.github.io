@@ -1,4 +1,4 @@
-# Solutions to programming problems from Chapter 3 of Object Oriented Programming in C++ by Robert Lafore
+# Chapter 3 Loops and Decisions
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -1341,8 +1341,10 @@ void swap(int& a, int& b)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+# Chapter : Objects and Classes
 
-### Q10. Write a function that, when you call it, displays a message telling how many times it has been called: “I have been called 3 times”, for instance. Write a main() program that calls this function at least 10 times. Try implementing this function in two different ways. First, use a global variable to store the count. Second, use a local static variable. Which is more appropriate? Why can’t you use a local variable? 
+
+### Q1. Create a class that imitates part of the functionality of the basic data type int. Call the class Int (note different capitalization). The only data in this class is an int variable. Include member functions to initialize an Int to 0, to initialize it to an int value, to display it (it looks just like an int), and to add two Int values. Write a program that exercises this class by creating one uninitialized and two initialized Int values, adding the two initialized values and placing the response in the uninitialized value, and then displaying this result.
 
 
-#### Solution: This program is similar to the example where it prints out something for every time it is called. Here, however we need to focus on making the output "I have been called x times". We have to solve for x and insert x in our output using the output stream. 
+#### Solution:
