@@ -1263,8 +1263,86 @@ void swap(int& a, int& b)
 
 ### 9. Repeat Exercise 8, but instead of two int variables, have the swap() function interchange two struct time values (see Question 6).
 
-#### Solution:
+#### Solution: This problem again deals with "passing by reference". We have come to that part of the chapter. In this question we will be passing a structure as argument to a function called swap and we will be passing it by reference. 
 
 
+```C++
+#include<iostream>
+using namespace std;
 
 
+/////////////////////////////////Structure////////////////////////////////////////////
+
+
+struct time
+{
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////Function Declaration/////////////////////////////////
+
+
+void swap(time& time1, time& time2);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+	time time1, time2;
+	
+
+	cout << "Please enter hours value of first time: ";
+	cin >> time1.hours;
+	
+	cout << "Please enter minutes value of first time: ";
+	cin >> time1.minutes;
+	
+	cout << "Please enter seconds value of first time: ";
+	cin >> time1.seconds;
+	
+	cout << "Please enter hours value of second time: ";
+	cin >> time2.hours;
+	
+	cout << "Please enter minutes value of second time: ";
+	cin >> time2.minutes;
+	
+	cout << "Please enter hours value of second time: ";
+	cin >> time2.seconds;
+	
+	swap(time1, time2);
+	
+	cout << "After swap the first time is : " << time1.hours << ":" << time1.minutes << ":" << time1.seconds << endl;
+	cout << "And the second time is : " << time2.hours << ":" << time2.minutes << ":" << time2.seconds;
+	
+	return 0;
+}
+
+/////////////////////////////Function Definition////////////////////////////////////////
+
+
+void swap(int& a, int& b)
+{
+    int temp = a;
+        a = b;
+        b = temp;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+```
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q10. Write a function that, when you call it, displays a message telling how many times it has been called: “I have been called 3 times”, for instance. Write a main() program that calls this function at least 10 times. Try implementing this function in two different ways. First, use a global variable to store the count. Second, use a local static variable. Which is more appropriate? Why can’t you use a local variable? 
+
+
+#### Solution: This program is similar to the example where it prints out something for every time it is called. Here, however we need to focus on making the output "I have been called x times". We have to solve for x and insert x in our output using the output stream. 
