@@ -1,5 +1,5 @@
 
-## The following are solutions to problems of Chapter 2 of Object Oriented Programming in C++ by Robert Lafore.
+# Chapter 2 : C++ Basics
 ## Please click the link below for coloured formatting for better legibility, otherwise continue reading. 
 
 [For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
