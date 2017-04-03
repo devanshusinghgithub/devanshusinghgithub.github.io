@@ -1500,3 +1500,54 @@ int main()
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+### Q3.Create an employee class, basing it on Question 4 of Chapter 4. The member data should comprise an int for storing the employee number and a float for storing the employee’s compensation. Member functions should allow the user to enter this data and display it. Write a main() that allows the user to enter data for three employees and display it.
+
+#### Solution:
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+class employee{
+    private:
+        int eNum;
+        float eComp;
+    
+    public:
+        void empData(){
+        cout << "Please enter the employee number: ";
+        cin >> eNum;
+        cout << "Please enter the salary corresponding to that employee number: " ;
+        cin >> eComp;
+        }
+  
+    void display(){
+        cout << "Employee Number: " << eNum << endl;
+        cout << "Enployee Salary: " << eComp << endl;
+        }
+};
+
+int main(){
+ 
+ employee a, b, c;
+ 
+    cout << "Please enter the data for first employee: " << endl;
+    a.empData();
+    
+    cout << "Please enter the data for second employee: " << endl;
+    b.empData();
+
+    cout << "Please enter the data For third employee: " << endl;
+    c.empData();
+    
+    
+    cout << "The following entries have been made: " << endl;
+    a.display();
+    b.display();
+    c.display();
+    
+    return 0;
+}
+```
