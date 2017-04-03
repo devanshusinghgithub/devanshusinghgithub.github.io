@@ -1786,3 +1786,209 @@ void swap(int& a, int& b)
 
 #### Solution:
 
+```C++
+#include<iostream>
+using namespace std;
+
+
+///////////////////////////////////Class/////////////////////////////////////////////
+
+class Int
+
+{
+
+private:
+
+    int var1;
+
+public:
+
+    Int()
+
+    { var1 = 0; }
+
+    Int(int var2)
+
+        { var1 = var2; }
+
+  
+
+    int add(Int Int1,Int Int2)
+
+        { var1 = Int1.var1 + Int2.var1; 
+        return 0;
+        }
+
+    int display()2
+        { cout << var1; 
+        return 0;
+        }
+
+};
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    
+    c.add(a,b);
+    
+    cout << "The result is: " << c.display() << endl;
+    
+    return 0;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+### Q2. Imagine a tollbooth at a bridge. Cars passing by the booth are expected to pay a 50 cent toll. Mostly they do, but sometimes a car goes by without paying. The tollbooth keeps track of the number of cars that have gone by, and of the total amount of money collected. 
+### Model this tollbooth with a class called tollBooth. The two data items are a type unsigned int to hold the total number of cars, and a type double to hold the total amount of money collected. A constructor initializes both of these to 0. A member function called payingCar() increments the car total and adds 0.50 to the cash total. Another function, called nopayCar(), increments the car total but adds nothing to the cash total. Finally, a member function called display() displays the two totals. Make appropriate member functions const.
+### Include a program to test this class. This program should allow the user to push one key to count a paying car, and another to count a nonpaying car. Pushing the Esc key should cause the program to print out the total cars and total cash and then exit.
+
+#### Solution: 
+
+```C++
+#include <iostream>
+using namespace std;
+
+/////////////////////////////////////Class///////////////////////////////////////////
+
+class tollBooth
+{ 
+    private:
+       int null,pcar,wpcar;
+       float tax;
+    public:
+       tollboth()
+       {
+              tax = 0;
+              pcar = 0;
+              wpcar = 0;
+              null = 0;
+       }
+       void paycar(int a)
+       {
+
+       pcar = pcar + a;
+       for(null; null <= pcar; null++)
+       {
+              tax = tax + 0.50;
+       }
+       }
+       void withoutpay(int b)
+       {
+       wpcar = wpcar + b;
+       }
+       void showdata()
+       {
+       cout << "Total no of payed cars are : " << pcar << endl;
+       cout<< "Total tax is : "<<tax<<endl; 
+       cout<< "Total no of not payed cars are : "<< wpcar << endl;
+    
+       }
+};
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+       tollboth tb;
+       char press,input;
+       int a,b;
+ do{
+    
+       cout << "Press 1 for car pay tax" << endl;
+       cout << "Press 2 for car not pay tax" << endl;
+       cout << "Press 3 for total tax and Exit" << endl;
+       cin >> press;
+
+       switch(press)
+       {
+       case '1':
+              {
+                     cout << "Enter No of the cars pay tax"<<endl;
+                     cin >> a;
+                     tb.paycar(a);
+                     break;
+              }
+       case '2':
+              {
+                     cout << "Enter No of cars not pay tax" << endl;
+                     cin >> b;
+                     tb.withoutpay(b);
+                     break;
+              }    
+       } 
+       cout <<"Press y to continue and n for terminate" << endl;
+       cin >> input;
+       }
+       while(input == 'y');
+       tb.showdata();
+    system("pause");
+    return 0;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+### Q3.Create an employee class, basing it on Question 4 of Chapter 4. The member data should comprise an int for storing the employee number and a float for storing the employee’s compensation. Member functions should allow the user to enter this data and display it. Write a main() that allows the user to enter data for three employees and display it.
+
+#### Solution:
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+//////////////////////////////////Class//////////////////////////////////////
+
+class employee{
+    private:
+        int eNum;
+        float eComp;
+    
+    public:
+        void empData(){
+        cout << "Please enter the employee number: ";
+        cin >> eNum;
+        cout << "Please enter the salary corresponding to that employee number: " ;
+        cin >> eComp;
+        }
+  
+    void display(){
+        cout << "Employee Number: " << eNum << endl;
+        cout << "Enployee Salary: " << eComp << endl;
+        }
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+int main(){
+ 
+ employee a, b, c;
+ 
+    cout << "Please enter the data for first employee: " << endl;
+    a.empData();
+    
+    cout << "Please enter the data for second employee: " << endl;
+    b.empData();
+
+    cout << "Please enter the data For third employee: " << endl;
+    c.empData();
+    
+    
+    cout << "The following entries have been made: " << endl;
+    a.display();
+    b.display();
+    c.display();
+    
+    return 0;
+}
+```
+
+
