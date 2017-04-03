@@ -1416,3 +1416,87 @@ int main()
 ### Include a program to test this class. This program should allow the user to push one key to count a paying car, and another to count a nonpaying car. Pushing the Esc key should cause the program to print out the total cars and total cash and then exit.
 
 #### Solution: 
+
+```C++
+#include <iostream>
+using namespace std;
+
+/////////////////////////////////////Class///////////////////////////////////////////
+
+class tollBooth
+{ 
+    private:
+       int null,pcar,wpcar;
+       float tax;
+    public:
+       tollboth()
+       {
+              tax = 0;
+              pcar = 0;
+              wpcar = 0;
+              null = 0;
+       }
+       void paycar(int a)
+       {
+
+       pcar = pcar + a;
+       for(null; null <= pcar; null++)
+       {
+              tax = tax + 0.50;
+       }
+       }
+       void withoutpay(int b)
+       {
+       wpcar = wpcar + b;
+       }
+       void showdata()
+       {
+       cout << "Total no of payed cars are : " << pcar << endl;
+       cout<< "Total tax is : "<<tax<<endl; 
+       cout<< "Total no of not payed cars are : "<< wpcar << endl;
+    
+       }
+};
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+       tollboth tb;
+       char press,input;
+       int a,b;
+ do{
+    
+       cout << "Press 1 for car pay tax" << endl;
+       cout << "Press 2 for car not pay tax" << endl;
+       cout << "Press 3 for total tax and Exit" << endl;
+       cin >> press;
+
+       switch(press)
+       {
+       case '1':
+              {
+                     cout << "Enter No of the cars pay tax"<<endl;
+                     cin >> a;
+                     tb.paycar(a);
+                     break;
+              }
+       case '2':
+              {
+                     cout << "Enter No of cars not pay tax" << endl;
+                     cin >> b;
+                     tb.withoutpay(b);
+                     break;
+              }    
+       } 
+       cout <<"Press y to continue and n for terminate" << endl;
+       cin >> input;
+       }
+       while(input == 'y');
+       tb.showdata();
+    system("pause");
+    return 0;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
