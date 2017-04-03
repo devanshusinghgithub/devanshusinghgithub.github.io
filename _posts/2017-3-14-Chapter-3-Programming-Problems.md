@@ -1344,7 +1344,66 @@ void swap(int& a, int& b)
 # Chapter : Objects and Classes
 
 
-### Q1. Create a class that imitates part of the functionality of the basic data type int. Call the class Int (note different capitalization). The only data in this class is an int variable. Include member functions to initialize an Int to 0, to initialize it to an int value, to display it (it looks just like an int), and to add two Int values. Write a program that exercises this class by creating one uninitialized and two initialized Int values, adding the two initialized values and placing the response in the uninitialized value, and then displaying this result.
+### Q1. Create a class that imitates part of the functionality of the basic data type int. Call the class Int (note different capitalization). The only data in this class is an int variable. Include member functions to initialize an Int to 0, to initialize it to an int value, to display it (it looks just like an int), and to add two Int values.
+
+### Write a program that exercises this class by creating one uninitialized and two initialized Int values, adding the two initialized values and placing the response in the uninitialized value, and then displaying this result.
 
 
 #### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+
+
+///////////////////////////////////Class/////////////////////////////////////////////
+
+class Int
+
+{
+
+private:
+
+    int var1;
+
+public:
+
+    Int()
+
+    { var1 = 0; }
+
+    Int(int var2)
+
+        { var1 = var2; }
+
+  
+
+    int add(Int Int1,Int Int2)
+
+        { var1 = Int1.var1 + Int2.var1; 
+        return 0;
+        }
+
+    int display()
+        { cout << var1; 
+        return 0;
+        }
+
+};
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    
+    c.add(a,b);
+    
+    cout << "The result is: " << c.display() << endl;
+    
+    return 0;
+}
+```
