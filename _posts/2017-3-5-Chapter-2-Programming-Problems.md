@@ -653,7 +653,6 @@ return 0;
 
 #### Solution:
 
-# I am really starting to enjoy programming now...LOL
 
 
 ```C++
