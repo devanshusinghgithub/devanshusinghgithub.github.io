@@ -5,7 +5,7 @@
 [For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
 
 
---------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -1996,3 +1996,34 @@ int main(){
 ### Q4 Start with the date structure in Question 5 in Chapter 4 and transform it into a date class. Its member data should consist of three ints: month, day, and year. It should also have two member functions: getdate(), which allows the user to enter a date in 12/31/02 format, and showdate(), which displays the date.
 
 #### Solution:
+
+```C++
+#include<iostream>
+using namespace std;
+
+class date
+{
+private:
+
+	int day, month, year;
+	
+public:
+	void getdate()
+	{
+	cout<<"Enter date in [DD/MM/YY] format: ";
+	cin >>day>>c>>month>>c>>year;
+	}
+	void showdate() const { cout<<"Date is: "<<day<<c<<month<<c<<year;}};
+
+int main()
+{
+	date x;
+	
+	x.getdate();
+	x.showdate();
+	
+	return 0;
+}
+```
+
+-------------------------------------------------------------------------------------------------------------------------------
