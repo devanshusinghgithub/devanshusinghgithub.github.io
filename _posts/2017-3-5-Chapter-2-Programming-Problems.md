@@ -1,5 +1,5 @@
 
-# Chapter 2 : C++ Basics
+# C++ Basics
 ## Please click the link below for coloured formatting for better legibility, otherwise continue reading. 
 
 [For coloured code formatting click here](https://github.com/devanshusinghgithub/devanshusinghgithub.github.io/blob/master/_posts/2017-3-5-Chapter-2-Programming-Problems.md)
@@ -435,7 +435,7 @@ int main()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-# Chapter 3 Loops and Decisions
+# Loops and Decisions in C++
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -823,7 +823,7 @@ return 0;
 --------------------------------------------------------------------------------------------------------------------------------
 
 
-# Solutions To Problem From Chapter 4 Of Object Oriented Programming in C++
+# Intermediate Algorithm Scripting in C++
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -1225,7 +1225,7 @@ return 0;
 --------------------------------------------------------------------------------------------------------------------------------
 
 
-# Questions on Functions
+# Functions in C++
 
 
 
@@ -1777,7 +1777,7 @@ void swap(int& a, int& b)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-# Chapter : Objects and Classes
+# Objects and Classes - Upper Intermediate Scripting
 
 
 ### Q1. Create a class that imitates part of the functionality of the basic data type int. Call the class Int (note different capitalization). The only data in this class is an int variable. Include member functions to initialize an Int to 0, to initialize it to an int value, to display it (it looks just like an int), and to add two Int values. Write a program that exercises this class by creating one uninitialized and two initialized Int values, adding the two initialized values and placing the response in the uninitialized value, and then displaying this result.
